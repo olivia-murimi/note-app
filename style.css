@@ -4,3 +4,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 
 }
+.heading{
+    color: darkblue;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 35px;
+}
