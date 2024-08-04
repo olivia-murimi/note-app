@@ -10,3 +10,8 @@ body{
     padding-top: 10px;
     font-size: 35px;
 }
+.info-text{
+    text-align: center;
+    color: darkblue;
+    font-size: 18px;
+}
