@@ -33,4 +33,10 @@ body{
     border:none ;
     outline: none;
     background-color: rgba(255,255,255,.1);
+    box-sizing: border-box;
+}
+.note::placeholder{
+    color: gray;
+    opacity: 30%;
+    
 }
