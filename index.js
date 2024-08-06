@@ -54,3 +54,8 @@ function saveNote(notes) {
     localStorage.setItem("note-app", JSON.stringify(notes));
 }
 
+function getNotes() {
+    return JSON.parse(localStorage.getItem("note-app") || "[]");
+}
+
+btnEl.addEventListener("click",addNote);
