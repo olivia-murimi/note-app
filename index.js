@@ -35,3 +35,10 @@ function deleteNote(id,element){
     saveNote(notes)
     appEl.removeChild(element)
 }
+function addNote() {
+    const notes = getNotes();
+    const noteObj = {
+        id: Math.floor(Math.random() *100000),
+        content: "",
+    };
+}
