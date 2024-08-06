@@ -21,6 +21,11 @@ function createNoteEl(id,content) {
         deleteNote(id,element);
     }
     });
-
     
+    element.addEventListener("input", () =>{
+    updateNote(id, element.value);
+    });
+
+    return element;
+
 }
