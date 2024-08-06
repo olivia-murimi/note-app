@@ -41,4 +41,12 @@ function addNote() {
         id: Math.floor(Math.random() *100000),
         content: "",
     };
+    const noteEl = createNoteEl(noteObj.id, noteObj.content);
+    appEl.insertBefore(noteEl, btnEl);
+
+    notes.push(noteObj);
+
+    saveNote(notes);
+    
 }
+
