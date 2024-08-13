@@ -1,7 +1,7 @@
 const btnEl = document.getElementById("btn");
 const appEl = document.getElementById("app");
 
-getNotes .foreach((note) => {
+getNotes ().foreach((note) => {
     const noteEl = createNoteEl(note.id, note.content);
     appEl.insertBefore(noteEl,btnEl);
 
@@ -9,20 +9,20 @@ getNotes .foreach((note) => {
 
 
 
-function createNoteEl(id,content) {
+function createNoteEl(id, content) {
     const element = document.createElement("textarea");
     element.classList.add("note");
     element.placeholder = "Empty Note";
     element.value = content;
 
-    element.addEventListener("dblick", () => {
+    element.addEventListener("dblcick", () => {
     const warning = confirm("Do you want to delete this note");
     if (warning) {
         deleteNote(id,element);
-    }
+        }
     });
     
-    element.addEventListener("input", () =>{
+    element.addEventListener("input", () => {
     updateNote(id, element.value);
     });
 
@@ -30,9 +30,9 @@ function createNoteEl(id,content) {
 
 }
 
-function deleteNote(id,element){
-    const notes = getNotes().filter((note)=>note.id != id)
-    saveNote(notes)
+function deleteNote(id,element) {
+    const notes = getNotes().filter((note)=>note.id != id);
+    saveNote(notes);
     appEl.removeChild(element)
 }
 function addNote() {
